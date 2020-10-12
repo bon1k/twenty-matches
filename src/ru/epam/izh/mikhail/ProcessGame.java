@@ -1,12 +1,23 @@
 package ru.epam.izh.mikhail;
 
-import java.util.Objects;
-
 public class ProcessGame {
 
 
     public static void main(String[] args) {
-        System.out.println("Game: 20 спичек ");
+
+
+
+
+        ViewConsole viewConsole = new ViewConsole();
+
+        viewConsole.sayCount();
+        viewConsole.sayComp();
+        viewConsole.sayUser();
+        viewConsole.setCountMatches(viewConsole.getCountMatches()- viewConsole.getPutUser());
+        viewConsole.sayCount();
+
+
 
     }
 }
+
