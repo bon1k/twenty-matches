@@ -10,11 +10,18 @@ public class LogicComp {
         return randomStepComp;
     }
 
-    public int stepLogic(int countMatches, int stepUser){
-        int putUser = 1;
+    public int stepLogic(int stepUser, int countMatches){
+        if (countMatches == 4){
+            return 3;
+        }
+        if (countMatches == 3){
+            return 2;
+        }
+        if (countMatches == 2){
+            return 1;
+        }
+        int logic = 4-stepUser;
 
-        return putUser+1;
+        return logic;
     }
-
-
 }

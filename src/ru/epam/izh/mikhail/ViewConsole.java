@@ -13,7 +13,6 @@ public class ViewConsole {
     }
 
     public static void sayComp(int getPutComp) {
-
         System.out.println(" - Компьютер взял спичек = " + getPutComp);
     }
 
@@ -35,7 +34,6 @@ public class ViewConsole {
         return stepUser;
     }
     public static void sayWinner() {
-
         System.out.println("Для игрока осталась последняя спичка. Игрок проиграл");
     }
 }
