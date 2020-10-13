@@ -2,8 +2,10 @@ package ru.epam.izh.mikhail;
 
 public class LogicComp {
 
-    public int step(ViewConsole){
+    public static int stepComp(){
+        int putUser = 1;
 
+        return putUser+1;
     }
 
 
