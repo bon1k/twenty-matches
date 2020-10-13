@@ -1,31 +1,42 @@
 package ru.epam.izh.mikhail;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class ProcessGame {
+    static int countMatches = 20;
+    static int stepComp;
 
+    static void count (){
+        ViewConsole.sayCount(countMatches);
+    }
 
     public static void main(String[] args) {
-        int countMatches = 20;
+        LogicComp logicComp = new LogicComp();
 
-        ViewConsole.sayCount(countMatches);
+        count();
 
-       while (countMatches>1){
+        while (countMatches>1){
 
-           int b = LogicComp.stepComp();
+            if (countMatches > 12){
+                stepComp = logicComp.stepRandom();
+            }else {
+                stepComp = logicComp.stepLogic(1,2);
+            }
 
+            ViewConsole.sayComp(stepComp);
+            countMatches -=stepComp;
+            count();
 
-           ViewConsole.sayComp(b);
-           countMatches = countMatches - b;
-           ViewConsole.sayCount(countMatches);
+            if (countMatches <= 1){
+                ViewConsole.sayWinner();
+                break;
+            }
 
-           int a = ViewConsole.sayUser();
-           countMatches = countMatches - a;
-
-
-       }
-
-
+            int stepUser = ViewConsole.sayUser();
+            countMatches -= stepUser;
+            count();
+        }
 
     }
 }
