@@ -21,7 +21,6 @@ public class LogicComp {
             return 1;
         }
         int logic = 4-stepUser;
-
         return logic;
     }
 }
